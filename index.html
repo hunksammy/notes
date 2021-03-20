@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - vuejs firebase list</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <h2>Firebase List</h2>
+  <div v-for="item in items" class="item" :key="item.key">
+    <button @click="removeItem(item)">&times;</button> {{item.value}} <small>{{new Date(item.ts).toGMTString()}}</small>
+  </div>
+
+  <div>
+    <form action="#"><input v-model="tempItem"><button @click="addItem(tempItem); tempItem = ''" :disabled="tempItem===''"> + </button> </form>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src='https://www.gstatic.com/firebasejs/5.8.6/firebase.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vuefire/1.4.5/vuefire.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

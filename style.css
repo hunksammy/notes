@@ -1,0 +1,74 @@
+@charset "UTF-8";
+body {
+  background: #0b132b;
+}
+
+input, button {
+  background: #1c2541;
+  border: none;
+  color: #5bc0be;
+  padding: 0.8em;
+  outline: none;
+}
+input:disabled, button:disabled {
+  background: #141b2f;
+  color: #31445a;
+}
+input:disabled:hover, button:disabled:hover {
+  background: #141b2f;
+  color: #31445a;
+}
+input:hover, input:active, button:hover, button:active {
+  background: #3a506b;
+  color: #6fffe9;
+}
+
+#app {
+  padding: 2em;
+  line-height: 2.4em;
+}
+#app h2 {
+  color: #3a506b;
+  font-size: 2em;
+  margin: 0.8em 0 0.4em 0;
+}
+#app .item {
+  color: #6fffe9;
+  padding: 0.2em;
+  transition: all 0.3s;
+}
+#app .item small {
+  font-size: 0.6em;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+#app .item button {
+  display: none;
+  margin-left: 0.3em;
+  transition: all 0.3s;
+  padding: 0.4em;
+}
+#app .item::before {
+  content: "»";
+  color: #5bc0be;
+  margin-right: 0.6em;
+}
+#app .item:hover {
+  padding-left: 0.4em;
+}
+#app .item:hover small {
+  opacity: 0.8;
+}
+#app .item:hover::before {
+  display: none;
+  margin: 0em;
+}
+#app .item:hover button {
+  margin-left: -0.3em;
+  margin-right: 0.2em;
+  display: inline-block;
+}
+#app .item:hover button:hover, #app .item:hover button:active {
+  background: #7A0216;
+  color: #EDF2F4;
+}
